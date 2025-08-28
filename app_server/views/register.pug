@@ -1,0 +1,25 @@
+extends layout
+include _includes/sharedHTMLfunctions
+
+block content
+  .row.banner
+    .col-12
+      h1= pageHeader.title
+  .row
+    .col-12.col-md-8
+      form(action="/register", method="post", role="form")
+        .form-group.row
+          label.col-10.col-sm-2.col-form-label(for="firstName") first name
+          .col-12.col-sm-10
+            input#name.form-control(firstName="firstName")
+          label.col-10.col-sm-2.col-form-label(for="lastName") last name
+          .col-12.col-sm-10
+            input#name.form-control(lastName="lastName")
+          label.col-10.col-sm-2.col-form-label(for="username") username
+          .col-12.col-sm-10
+            input#name.form-control(userName="username")
+          label.col-10.col-sm-2.col-form-label(for="password") password
+          .col-12.col-sm-10
+            input#name.form-control(password="password")
+          .col-sm-10
+        button.btn.btn-primary.float(type="submit") Register
